@@ -1,9 +1,12 @@
 var test = require('tape');
 var templates = require('./fixtures/templates.json');
+var Template = template.Template;
 var createDefaultLocals = require('../dist').createDefaultLocals;
 
 test.skip('createDefaultLocals(tree, props)', function(t) {
   t.plan(0);
+
+  var locals = createDefaultLocals(Template, { });
 });
 
 test.skip('createDefaultLocals(tree, props) :: @children', function(t) {

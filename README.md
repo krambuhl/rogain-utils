@@ -1,37 +1,32 @@
-# Tree Utilities
+# Rogain Utilities
 
-Utilities for manipulating Rogain trees.
+Utilities for Rogain.
 
-## splitTree(trees, match)
+## createDefaultLocals(tree, props)
 
-Splits an array of trees at matching element.
-
-___trees___
-
-Array of trees.
-
-___match___
-
-Object.
-
-`match` is used to segment the input array between each matching tree.
+Creates a copy and extends default properties from tree and props.
 
 ```js
-var branches = splitTree(tree.children, {
-    type: 'component',
-    name: 'Else'
-});
-
-var passing = branches[0];
-var failing = branches[1];
+var locals = createDefaultLocals(tree, props);
+// { '@attrs': { ... }, '@data': { ... }, '@children': [ ... ] }
 ```
 
-## Install 
+## createFrame(tree, locals)
+
+Creates a tree node of the `frame` type with `locals` as scope data and `tree` as children.  This represents a new scope, no variables fall through by default – all locals should be manually defined from outside scopes.
+
+```js
+var frame = createFrame(tree, locals);
+// { type: 'frame', children: tree, locals: locals }
+```
+
+
+## Install
 
 With [npm](https://www.npmjs.com) do:
 
 ```
-npm install rogain-parser
+npm install rogain-utils
 ```
 
 ## License
