@@ -1,4 +1,4 @@
-# Rogain Utilities
+# rogain-utils
 
 Utilities for Rogain.
 

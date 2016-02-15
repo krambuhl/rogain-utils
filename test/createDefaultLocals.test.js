@@ -9,10 +9,6 @@ test.skip('createDefaultLocals(tree, props)', function(t) {
   var locals = createDefaultLocals(Template, { });
 });
 
-test.skip('createDefaultLocals(tree, props) :: @children', function(t) {
-  t.plan(0);
-});
-
 test.skip('createDefaultLocals(tree, props) :: @data', function(t) {
   t.plan(0);
 });
