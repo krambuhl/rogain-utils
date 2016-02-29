@@ -11,7 +11,7 @@ var frame = createFrame(tree, locals);
 // { type: 'frame', children: tree, locals: locals }
 ```
 
-## splitTree(treeList, match)
+## splitTrees(treeList, match)
 
 Splits an array of trees at matching tree.
 
