@@ -34,10 +34,10 @@ test('splitTrees(tree, { }) :: first', function(t) {
 
   var trees = splitTrees(treeList, { type: 'text', data: 'hello-world' });
 
-  t.equal(trees[0].length, treeList.length - 1);
-  t.equal(trees[0][0].type, treeList[1].type);
-  t.equal(trees[0][1].type, treeList[2].type);
-  t.equal(trees[0][2].type, treeList[3].type);
+  t.equal(trees[1].length, treeList.length - 1);
+  t.equal(trees[1][0].type, treeList[1].type);
+  t.equal(trees[1][1].type, treeList[2].type);
+  t.equal(trees[1][2].type, treeList[3].type);
 });
 
 test('splitTrees(tree, { }) :: last', function(t) {
