@@ -1,6 +1,6 @@
 {
   "name": "rogain-utils",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Rogain utilities",
   "main": "dist/index.js",
   "scripts": {
@@ -28,5 +28,8 @@
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2015": "^6.3.13",
     "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "object-contains": "^0.1.0"
   }
 }
