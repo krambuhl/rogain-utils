@@ -5,7 +5,7 @@ var tree = {
   type: 'node',
   children: [
     { type: 'text', data: 'hello-world' },
-    { type: 'helper', name: 'NonEmpty' },
+    { type: 'component', name: 'NonEmpty' },
     { type: 'tag', tagName: 'p' },
     { type: 'tag', tagName: 'div' },
     { type: 'component', name: 'Box' }
@@ -23,12 +23,12 @@ test('findAll(tree, match) :: not found', function(t) {
 test('findAll(tree, match) :: found one', function(t) {
   t.plan(4);
   
-  var res = findAll(tree.children, { type: 'helper' });
+  var res = findAll(tree.children, { type: 'text' });
   
   t.equal(res !== undefined, true);
   t.equal(res.length, 1);
-  t.equal(res[0].type, 'helper')
-  t.equal(res[0].name, 'NonEmpty')
+  t.equal(res[0].type, 'text')
+  t.equal(res[0].data, 'hello-world')
 });
 
 test('findAll(tree, match) :: found many', function(t) {

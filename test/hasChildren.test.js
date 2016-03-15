@@ -5,7 +5,7 @@ var tree = {
   type: 'node',
   children: [
     { type: 'text', data: 'hello-world' },
-    { type: 'helper', name: 'NonEmpty' },
+    { type: 'component', name: 'NonEmpty' },
     { type: 'tag', tagName: 'p' },
     { type: 'tag', tagName: 'div' },
     { type: 'component', name: 'Box' }

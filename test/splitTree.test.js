@@ -3,7 +3,7 @@ var splitTrees = require('../dist').splitTrees;
 
 var treeList = [
   { type: 'text', data: 'hello-world' },
-  { type: 'helper', name: 'NonEmpty' },
+  { type: 'component', name: 'NonEmpty' },
   { type: 'tag', tagName: 'p' },
   { type: 'tag', tagName: 'div' },
   { type: 'component', name: 'Box' }
@@ -22,7 +22,7 @@ test('splitTrees(tree)', function(t) {
 test('splitTrees(tree, { }) :: middle', function(t) {
   t.plan(3);
 
-  var trees = splitTrees(treeList, { type: 'helper', name: 'NonEmpty' });
+  var trees = splitTrees(treeList, { type: 'component', name: 'NonEmpty' });
 
   t.equal(trees[0][0].type, treeList[0].type);
   t.equal(trees[1][0].type, treeList[2].type);

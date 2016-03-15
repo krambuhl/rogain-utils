@@ -27,7 +27,7 @@ Object.
 
 ```js
 var branches = splitTree(tree.children, {
-    type: 'helper',
+    type: 'component',
     name: 'Else'
 });
 
@@ -51,7 +51,7 @@ ___match___
 Object. Needle tree.
 
 ```js
-var res = find(tree.children, { type: 'helper', name: 'Else' });
+var res = find(tree.children, { type: 'component', name: 'Else' });
 ```
 
 
@@ -69,6 +69,28 @@ Object. Needle tree.
 
 ```js
 var res = findAll(tree.children, { type: 'tag', tagName: 'a' });
+```
+
+## findPath(tree, match, initialPath)
+
+Returns object path for first tree matching `match` object.  Will treverse deep.
+
+___tree___
+
+Rogain tree. Haystack.
+
+___match___
+
+Object. Needle.
+
+___initialPath___
+
+String.  starting path used when building path.
+
+```js
+//<Box><div><Block /><Children /></div></Box>
+var path = findPath(Box, { name: 'Children' });
+// children.0.children.1
 ```
 
 
